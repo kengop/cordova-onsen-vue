@@ -16,6 +16,7 @@
             <div class="content">Cordova Template</div>
         </v-ons-card>
         <v-ons-button modifier="large--quiet" @click="$store.commit('splitter/toggle')">Open left menu</v-ons-button>
+        <a href="https://ja.onsen.io/vue/">Open Link</a>
     </v-ons-page>
 </template>
 <script>

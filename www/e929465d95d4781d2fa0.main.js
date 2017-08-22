@@ -24306,6 +24306,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -27132,7 +27133,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.$store.commit('splitter/toggle')
       }
     }
-  }, [_vm._v("Open left menu")])], 1)
+  }, [_vm._v("Open left menu")]), _vm._v(" "), _c('a', {
+    attrs: {
+      "href": "https://ja.onsen.io/vue/"
+    }
+  }, [_vm._v("Open Link")])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
