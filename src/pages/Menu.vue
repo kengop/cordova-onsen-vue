@@ -18,12 +18,14 @@
 </template>
 <script>
 import About from './About.vue';
+import Page2 from './Page2.vue';
 export default{
     data(){
         return{
             items: [
                 {title: "Home", icon:"ion-home", page:""},
                 {title: "About", icon:"ion-ios-book", page:About},
+                {title: "Page2", icon:"ion-ios-americanfootball", page:Page2},
                 {title: "Contact", icon:"ion-ios-email", page:""},
                 {title: "Settings", icon:"ion-gear-a", page:""}
             ]
