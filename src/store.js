@@ -55,6 +55,20 @@ export default {
                     state.index = index;
                 }
             }
+        },
+        page2: {
+            strict: true, // 厳格（strict）モード
+            // 厳格モードでは Vuex の状態がミューテーションハンドラの外部で変更されたら、エラーを投げるようになる
+            // 本番環境で厳格モードを有効にしてデプロイしてはいけません
+            namespaced: true,
+            state: {
+                name: ''
+            },
+            mutations: {
+                set(state, text){
+                    state.name = text;
+                }
+            }
         }
     }
 };
