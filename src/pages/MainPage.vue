@@ -17,6 +17,9 @@
         </v-ons-card>
         <v-ons-button modifier="large--quiet" @click="$store.commit('splitter/toggle')">Open left menu</v-ons-button>
         <a href="https://ja.onsen.io/vue/">Open Link</a>
+        <v-ons-button modifier="large" style="margin: 6px 0" @click="openlink_system">Open (_system)</v-ons-button>
+        <v-ons-button modifier="large" style="margin: 6px 0" @click="openlink_blank">Open (_blank)</v-ons-button>
+        <v-ons-button modifier="large" style="margin: 6px 0" @click="openlink_self">Open (_self)</v-ons-button>
     </v-ons-page>
 </template>
 <script>
@@ -30,6 +33,21 @@ export default{
     methods: {
         push(page){
             this.$store.commit('navigator/push', About);
+        },
+        openlink_system(){
+            // loads in the system browser
+            var ref = cordova.InAppBrowser.open('http://apache.org', '_system');
+            ref.show();
+        },
+        openlink_blank(){
+            // loads in the InAppBrowser
+            var ref = cordova.InAppBrowser.open('http://apache.org', '_blank');
+            ref.show();
+        },
+        openlink_self(){
+            // loads in the Cordova WebView
+            var ref = cordova.InAppBrowser.open('http://apache.org', '_self');
+            ref.show();
         }
     }
 }
