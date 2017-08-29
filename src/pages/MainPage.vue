@@ -15,8 +15,14 @@
             <div class="title">About</div>
             <div class="content">Cordova Template</div>
         </v-ons-card>
+
+        <v-ons-list>
+            <v-ons-list-header>WhiteListの確認</v-ons-list-header>
+            <v-ons-list-item><a href="http://kengop.sample.s3-website-ap-northeast-1.amazonaws.com/">外部ページ (登録済み)</a></v-ons-list-item>
+            <v-ons-list-item><a href="https://ja.wikipedia.org/">Wikipedia (未登録)</a></v-ons-list-item>
+        </v-ons-list>
+
         <v-ons-button modifier="large--quiet" @click="$store.commit('splitter/toggle')">Open left menu</v-ons-button>
-        <a href="https://ja.onsen.io/vue/">Open Link</a>
         <v-ons-button modifier="large" style="margin: 6px 0" @click="openlink_system">Open (_system)</v-ons-button>
         <v-ons-button modifier="large" style="margin: 6px 0" @click="openlink_blank">Open (_blank)</v-ons-button>
         <v-ons-button modifier="large" style="margin: 6px 0" @click="openlink_self">Open (_self)</v-ons-button>
