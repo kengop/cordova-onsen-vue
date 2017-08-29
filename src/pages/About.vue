@@ -12,10 +12,20 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam in deserunt, quis quos sapiente laboriosam, quam itaque quibusdam earum dolorem, omnis quasi, tempora cupiditate. Hic, ipsa, atque! Laudantium, labore nemo.
             </p>
         </div>
+        <v-ons-button modifier="large" style="margin: 6px" @click="log_event">log event</v-ons-button>
     </v-ons-page>
 </template>
 <script>
-export default {
-    
+export default{
+    data(){
+        return {
+
+        }
+    },
+    methods: {
+        log_event(){
+            window.FirebasePlugin.logEvent("select_content", {content_type: "page_view", item_id: "home"});
+        }
+    }
 }
 </script>
